@@ -1,6 +1,6 @@
 # Terraform から複数の AWS アカウントを使い分ける方法
 
-Terraform から複数の AWS アカウントを使い分けたい場合、AWS CLI のプロファイル機能と Terraform の provider 設定を組み合わせます。Mac でも問題なく使えます。
+Terraform から複数の AWS アカウントを使い分けたい場合、AWS CLI のプロファイル機能と Terraform の provider 設定を組み合わせます。
 
 ## ✅ 手順
 
@@ -33,7 +33,7 @@ region = us-east-1
 region = ap-northeast-1
 ```
 
-Terraform のプロバイダで profile を指定
+### 2. Terraform のプロバイダで profile を指定
 Terraform の provider "aws" に profile を書くと、そのアカウントを使ってデプロイできます。
 
 例）main.tf
@@ -59,7 +59,7 @@ resource "aws_s3_bucket" "example" {
 }
 ```
 
-Terraform 実行
+### 3. Terraform 実行
 
 ```bash
 terraform init
